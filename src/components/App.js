@@ -23,8 +23,8 @@ class App extends Component {
                         <Switch>
                         <Route path = '/login' exact component = {Login}/>
                         <Route path = '/' exact component = {Home} />
-                        {/* <Route path = '/questions/:id' exact component = {QuestionPage}/>
-                        <Route path = '/questions/:id/vote' component = {QuestionVote}/>
+                        {/* <Route path = '/questions/:id' exact component = {QuestionPage}/> */}
+                        {/* <Route path = '/questions/:id/vote' component = {QuestionVote}/>
                         <Route path = '/questions/:id/result' component = {QuestionResult}/>
                         <Route path = '/new' component = {NewQuestion}/>
                         <Route path = '/leaderboard' component = {LeaderBoard}/>*/}

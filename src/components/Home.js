@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import Question from './Question'
+import QuestionTeaser from './QuestionTeaser'
 
 class Home extends Component {
     constructor (props) {
@@ -46,10 +46,10 @@ class Home extends Component {
                 <ul >
                     {setToAnswered
                     ? answeredQuestionsIds.map ( (id) => (
-                        <li key={id}><Question id={id} isAnswered = {setToAnswered}/></li>
+                        <li key={id}><QuestionTeaser id={id} isAnswered = {setToAnswered}/></li>
                     ))
                     : unansweredQuestionsIds.map ( (id) => (
-                        <li key={id}><Question id={id} isAnswered = {setToAnswered}/></li>
+                        <li key={id}><QuestionTeaser id={id} isAnswered = {setToAnswered}/></li>
                     ))}
                 </ul>
             </div>

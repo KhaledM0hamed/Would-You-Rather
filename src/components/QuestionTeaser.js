@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
-class Question extends Component {
+class QuestionTeaser extends Component {
 
     constructor (props) {
         super(props)
@@ -67,4 +67,4 @@ function mapStateToProps ({authUser, questions, users}, props) {
 
 
 
-export default connect(mapStateToProps)(Question)
+export default connect(mapStateToProps)(QuestionTeaser)
