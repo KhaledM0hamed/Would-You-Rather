@@ -1,8 +1,12 @@
-import { SET_AUTH_USER } from '../actions/authUser';
+import { SET_AUTH_USER, LOGOUT } from '../actions/authUser';
 
 export default function authUser(state = null, action) {
-    if (action.type === SET_AUTH_USER) {
-        return action.id;
+    switch (action.type) {
+        case SET_AUTH_USER:
+            return action.id
+        case LOGOUT:
+            return null 
+        default:
+            return state
     }
-    return state;
 }

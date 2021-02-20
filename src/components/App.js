@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { handleInitialData } from '../actions/shared';
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Login from './Login'
+import Nav from './Nav'
+import Home from './Home'
+
 class App extends Component {
     componentDidMount () {
         this.props.handleInitialData()
@@ -10,13 +14,27 @@ class App extends Component {
     render() {
         const { authUser } = this.props
         return (
-            <div>
-                { authUser === null
-                ? <Login />
-                : <h1>Hello, How are you?</h1> 
-                }
-                
-            </div>
+            <Router>
+                <div>
+                    { authUser === null
+                    ? <Login />
+                    : <div>
+                        <Nav />
+                        <Switch>
+                        <Route path = '/login' exact component = {Login}/>
+                        <Route path = '/' exact component = {Home} />
+                        {/* <Route path = '/questions/:id' exact component = {QuestionPage}/>
+                        <Route path = '/questions/:id/vote' component = {QuestionVote}/>
+                        <Route path = '/questions/:id/result' component = {QuestionResult}/>
+                        <Route path = '/new' component = {NewQuestion}/>
+                        <Route path = '/leaderboard' component = {LeaderBoard}/>
+                        <Route component = {NoMatch}/> */}
+                        </Switch>
+                    </div>
+                    }
+                    
+                </div>
+            </Router>
         )
     }
 }
