@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setAuthUser } from '../actions/authUser';
+import { Redirect } from "react-router-dom";
 
 class Login extends Component { 
 
@@ -38,6 +39,9 @@ class Login extends Component {
         
         const { text } = this.state
 
+        if (this.props.authUser !== null) {
+			return <Redirect to={'/'} />
+		}
         return (
             <div style={{textAlign: 'center', margin: '100px'}}>
                 <div> Welcome to Would you Rather  ..?</div>

@@ -6,7 +6,10 @@
     margin: 0 auto;
     background-color: rgba(235,235,235,1);
 }
+ul {
+    list-style-type: none;
 
+}
 .nav ul {
     margin: 0 auto;
     padding: 0px 10px 0px 10px;
@@ -31,4 +34,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.center {
+    text-align: center;
 }

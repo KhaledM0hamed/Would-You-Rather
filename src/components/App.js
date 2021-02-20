@@ -6,6 +6,8 @@ import Login from './Login'
 import Nav from './Nav'
 import Home from './Home'
 
+import NotFound from './NotFound'
+
 class App extends Component {
     componentDidMount () {
         this.props.handleInitialData()
@@ -16,10 +18,8 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    { authUser === null
-                    ? <Login />
-                    : <div>
-                        <Nav />
+                    { authUser !== null && <Nav />}
+                    <div>
                         <Switch>
                         <Route path = '/login' exact component = {Login}/>
                         <Route path = '/' exact component = {Home} />
@@ -27,11 +27,10 @@ class App extends Component {
                         <Route path = '/questions/:id/vote' component = {QuestionVote}/>
                         <Route path = '/questions/:id/result' component = {QuestionResult}/>
                         <Route path = '/new' component = {NewQuestion}/>
-                        <Route path = '/leaderboard' component = {LeaderBoard}/>
-                        <Route component = {NoMatch}/> */}
+                        <Route path = '/leaderboard' component = {LeaderBoard}/>*/}
+                        <Route component = {NotFound}/> 
                         </Switch>
                     </div>
-                    }
                     
                 </div>
             </Router>
