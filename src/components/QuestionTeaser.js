@@ -43,7 +43,7 @@ class QuestionTeaser extends Component {
                 <div>option one: {question.optionOne.text}</div>
                 <div>option two: {question.optionTwo.text}</div>
                 
-                <button onClick = {this.handleClick}>Show more</button>
+                <button onClick = {this.handleClick}>Show Poll</button>
             </div>
         )
     }
