@@ -37,7 +37,9 @@ class Home extends Component {
         
         return (
             <div >
+                <hr/>
                 <h1 className='center'>Questions</h1>
+                <hr/>
                 <div className='center'>
                     {setToAnswered === false
                     ? <button onClick={(e) => this.toggleQuestions(e, true)}>Show answered Polls</button> 

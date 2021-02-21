@@ -54,6 +54,9 @@ class QuestionVote extends Component {
         }
         return (
             <div className='center'>
+                <br/>
+                <br/>
+                <br/>
                 <div>
                     <img alt='avatar' src={users[question.author].avatarURL} className='user-avatar'/> 
                 </div>

@@ -48,9 +48,13 @@ class Question extends Component {
 
             return(
                 <div className='center'>
+                    <br/>
+                    <br/>
+                    <br/>
                     <div>
                         <img alt='avatar' src={users[question.author].avatarURL} className='user-avatar'/> 
                     </div>
+                    
                     <div>Question posted by: {users[question.author].name}</div>
                     <div>Option one: {question.optionOne.text}</div>
                     <div>Option two: {question.optionTwo.text}</div>
@@ -75,6 +79,9 @@ class Question extends Component {
 
         return (
             <div className='center'>
+                <br/>
+                <br/>
+                <br/>
                 <div>
                     <img alt='avatar' src={users[question.author].avatarURL} className='user-avatar'/> 
                 </div>
