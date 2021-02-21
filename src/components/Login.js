@@ -53,7 +53,7 @@ class Login extends Component {
                     />
                     <button>LogIn</button>
                 </form> 
-                <p>usernames: sarahedo , tylermcginnis , johndoe</p>
+                <p>usernames: sarahedo, tylermcginnis, johndoe</p>
             </div>
         )
     }

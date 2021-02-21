@@ -7,7 +7,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Question from './Question'
 import QuestionVote from './QuestionVote'
-
+import QuestionResult from './QuestionResult'
 import NotFound from './NotFound'
 
 class App extends Component {
@@ -27,8 +27,8 @@ class App extends Component {
                         <Route path = '/' exact component = {Home} />
                         <Route path = '/questions/:id' exact component = {Question}/>
                         <Route path = '/questions/:id/vote' component = {QuestionVote}/>
-                        {/* <Route path = '/questions/:id/result' component = {QuestionResult}/>
-                        <Route path = '/new' component = {NewQuestion}/>
+                        <Route path = '/questions/:id/result' component = {QuestionResult}/>
+                        {/* <Route path = '/new' component = {NewQuestion}/>
                         <Route path = '/leaderboard' component = {LeaderBoard}/>*/}
                         <Route component = {NotFound}/> 
                         </Switch>
